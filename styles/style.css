@@ -1,0 +1,122 @@
+/**** R E S E T  start****/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+button {
+  cursor: revert;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+textarea {
+  white-space: revert;
+}
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+::placeholder {
+  color: unset;
+}
+:where([hidden]) {
+  display: none;
+}
+:where([contenteditable]) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+/**** R E S E T  end****/
+/***
+    
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+
+font-family: 'Poppins', sans-serif;
+
+### Body
+
+font-family: 'Open Sans', sans-serif;
+**/
+
+body {
+  max-width: 375px;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../images/bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.container {
+  padding: 2rem;
+}
+header {
+  margin-bottom: 3rem;
+}
+header img {
+  width: clamp(30vh, 30vh, 40vh);
+}
+.main-img{
+    margin-bottom: 3rem;
+}
+.info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(1.5rem, 1.5rem, 2rem);
+  margin-bottom: 1rem;
+}
+.info p{
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 0.2px;
+    margin-bottom: 2rem;
+}
+a{
+    background-color: hsl(0, 0%, 100%);
+    color:  hsl(257, 40%, 49%);
+    padding: 0.5rem 4.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+}
+footer{
+    margin-top: 5rem;
+}
+footer ul{
+    display: flex;
+}
+li {
+    width: 20%;
+    border: solid 1px hsl(0, 0%, 100%);
+    border-radius: 100%;
+}
+li img{
+    fill: hsl(0, 0%, 100%);
+}
+
