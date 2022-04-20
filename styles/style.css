@@ -79,12 +79,13 @@ body {
 }
 header {
   margin-bottom: 3rem;
+  text-align: start;
 }
 header img {
-  width: clamp(30vh, 30vh, 40vh);
+  width: clamp(30vh, 20vw, 25vw);
 }
-.main-img{
-    margin-bottom: 3rem;
+.main-img {
+  margin-bottom: 3rem;
 }
 .info h2 {
   font-family: "Poppins", sans-serif;
@@ -93,30 +94,92 @@ header img {
   font-size: clamp(1.5rem, 1.5rem, 2rem);
   margin-bottom: 1rem;
 }
-.info p{
-    color: hsl(0, 0%, 100%);
-    letter-spacing: 0.2px;
-    margin-bottom: 2rem;
+.info p {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.2px;
+  margin-bottom: 2rem;
 }
-a{
-    background-color: hsl(0, 0%, 100%);
-    color:  hsl(257, 40%, 49%);
-    padding: 0.5rem 4.5rem;
-    border-radius: 2rem;
-    font-size: 0.9rem;
+a {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(257, 40%, 49%);
+  padding: 0.5rem 4.5rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  box-shadow: 0px 12px 24px -4px rgba(0,0,0,0.2);
 }
-footer{
-    margin-top: 5rem;
+a:hover{
+  background-color: hsl(300, 69%, 71%);
+  color: hsl(0, 0%, 100%);
 }
-footer ul{
-    display: flex;
+footer {
+  margin-top: 4rem;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
 }
 li {
-    width: 20%;
-    border: solid 1px hsl(0, 0%, 100%);
-    border-radius: 100%;
-}
-li img{
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 42px;
+    margin: 0rem 0.5rem;
     fill: hsl(0, 0%, 100%);
 }
+li:hover{
+  border: 1px solid hsl(300, 69%, 71%);
+  fill: hsl(300, 69%, 71%);
+}
+li svg{
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 377px){
+  body{
+    background-image: url(../images/bg-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+}
+@media (min-width: 800px){
+  .logo{
+    grid-area: a;
+    margin-bottom: auto;
+  }
+  .main-img{
+    margin-top: 3rem;
+    grid-area: b;
+  }
+  .info{
+    margin-top: 10rem;
+    grid-area: c;
+    text-align: start;
+  }
+  footer{
+    grid-area: d;
+    margin-top: auto;
+    padding-bottom: 3rem;
+  }
+ .container{
+   max-width: 1440px;
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(1fr 2fr 2fr 1fr);
+   grid-template-areas: 
+   "a . . ."
+   "b b c c"
+   "b b c c"
+   ". . . d";
+  }
+
+
+}
+
 
