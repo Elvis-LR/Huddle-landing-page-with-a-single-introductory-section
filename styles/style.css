@@ -66,10 +66,9 @@ font-family: 'Open Sans', sans-serif;
 **/
 
 body {
-  max-width: 375px;
+  min-width: 375px;
   background-color: hsl(257, 40%, 49%);
   background-image: url(../images/bg-mobile.svg);
-  background-size: contain;
   background-repeat: no-repeat;
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -82,7 +81,7 @@ header {
   text-align: start;
 }
 header img {
-  width: clamp(30vh, 20vw, 25vw);
+  width: clamp(15vh, 22vw, 25vw);
 }
 .main-img {
   margin-bottom: 3rem;
@@ -91,12 +90,14 @@ header img {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: hsl(0, 0%, 100%);
-  font-size: clamp(1.5rem, 1.5rem, 2rem);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 .info p {
-  color: hsl(0, 0%, 100%);
-  letter-spacing: 0.2px;
+  color: hsl(0, 0%, 100%, 0.7);
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+  line-height: 1.7;
   margin-bottom: 2rem;
 }
 a {
@@ -105,9 +106,9 @@ a {
   padding: 0.5rem 4.5rem;
   border-radius: 2rem;
   font-size: 0.9rem;
-  box-shadow: 0px 12px 24px -4px rgba(0,0,0,0.2);
+  box-shadow: 0px 12px 24px -4px rgba(0, 0, 0, 0.2);
 }
-a:hover{
+a:hover {
   background-color: hsl(300, 69%, 71%);
   color: hsl(0, 0%, 100%);
 }
@@ -118,68 +119,75 @@ footer ul {
   display: flex;
   justify-content: center;
   align-self: center;
-
 }
 li {
-    border: 1px solid hsl(0, 0%, 100%);
-    border-radius: 50%;
-    padding: 0.5rem;
-    height: 42px;
-    margin: 0rem 0.5rem;
-    fill: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  padding: 0.5rem;
+  height: 42px;
+  margin: 0rem 0.5rem;
+  fill: hsl(0, 0%, 100%);
 }
-li:hover{
+li:hover {
   border: 1px solid hsl(300, 69%, 71%);
   fill: hsl(300, 69%, 71%);
 }
-li svg{
+li svg {
   width: 24px;
   height: 24px;
 }
 
-@media (min-width: 377px){
-  body{
+@media (min-width: 377px) {
+  body {
+    background-image: none;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
     background-image: url(../images/bg-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   }
 }
-@media (min-width: 800px){
-  .logo{
+@media (min-width: 800px) {
+  .logo {
     grid-area: a;
     margin-bottom: auto;
   }
-  .main-img{
+  .main-img {
     margin-top: 3rem;
     grid-area: b;
   }
-  .info{
+  .info {
     margin-top: 10rem;
     grid-area: c;
     text-align: start;
   }
-  footer{
+  .info h2 {
+    font-size: 3rem;
+  }
+  .info p {
+    font-size: 1.3rem;
+    letter-spacing: 0.4px;
+  }
+  footer {
     grid-area: d;
-    margin-top: auto;
-    padding-bottom: 3rem;
+    margin-top: 0rem;
   }
- .container{
-   max-width: 1440px;
-   display: grid;
-   gap: 1rem;
-   grid-template-columns: repeat(1fr 2fr 2fr 1fr);
-   grid-template-areas: 
-   "a . . ."
-   "b b c c"
-   "b b c c"
-   ". . . d";
+  a {
+    font-size: 1.3rem;
   }
-
-
+  .container {
+    max-width: 1440px;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(1fr 2fr 2fr 1fr);
+    grid-template-areas:
+      "a . . ."
+      "b b c c"
+      "b b c c"
+      ". . . d";
+  }
 }
-
-
