@@ -144,6 +144,7 @@ li svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
   .container {
     background-image: url(../images/bg-desktop.svg);
